@@ -215,8 +215,8 @@ export default function Search() {
 
   // Update state and city if URL params change
   useEffect(() => {
-    setState(searchParams.get("state"));
-    setCity(searchParams.get("city"));
+    setState(searchParams.get("state" || ""));
+    setCity(searchParams.get("city" || ""));
   }, [searchParams]);
 
   // Open booking modal
